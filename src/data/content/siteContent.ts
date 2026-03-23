@@ -1,27 +1,18 @@
-import type {
-  Award,
-  CampaignPage,
-  CatalogCategory,
-  ContentPage,
-  FAQItem,
-  NavigationItem,
-  SiteConfig,
-} from "@/types/site";
+import type { Award, CampaignPage, CatalogCategory, ContentPage, FAQItem, NavigationItem, SiteConfig } from "@/types/site";
 
 export const siteConfig: SiteConfig = {
   companyName: "Quero Tech",
   shortName: "Quero",
   tagline: "Build performance-first systems for gaming, creators, AI, and work.",
-  description:
-    "Quero Tech is a dark, modern catalog and advisory storefront for gaming PCs, creator rigs, laptops, and components. Explore the full public catalog, configure a dream machine, and route every purchase intent into expert-led support.",
-  supportEmail: "hello@querotech.example",
-  phoneDisplay: "+91 90000 00000",
-  phoneHref: "tel:+919000000000",
-  whatsappHref: "https://wa.me/919000000000",
+  description: "Quero Tech is a storefront for gaming PCs, creator rigs, laptops, and components. Explore the full public catalog, configure a dream machine, and route every purchase intent into expert-led support.",
+  supportEmail: "querotechllp@gmail.com",
+  phoneDisplay: "+91 8019434798",
+  phoneHref: "tel:+918019434798",
+  whatsappHref: "https://wa.me/918019434798",
   primaryLocation: "Quero Tech Experience Center, Hyderabad, India",
   hours: "Mon-Sat, 10:00 AM - 8:00 PM",
   socials: [
-    { label: "Instagram", href: "https://instagram.com" },
+    { label: "Instagram", href: "https://instagram.com/querotechllp" },
     { label: "YouTube", href: "https://youtube.com" },
     { label: "LinkedIn", href: "https://linkedin.com" },
   ],
@@ -96,12 +87,7 @@ export const catalogCategories: CatalogCategory[] = [
   },
 ];
 
-export const homeValueProps = [
-  "Browse laptops, components, prebuilt PCs, and accessories in one place.",
-  "Get help choosing the right parts for gaming, work, or study.",
-  "Ask for custom build advice, bulk pricing, or product recommendations.",
-  "Shop a wide range of trusted computer brands and categories.",
-];
+export const homeValueProps = ["Browse laptops, components, prebuilt PCs, and accessories in one place.", "Get help choosing the right parts for gaming, work, or study.", "Ask for custom build advice, bulk pricing, or product recommendations.", "Shop a wide range of trusted computer brands and categories."];
 
 export const useCases = [
   {
@@ -127,22 +113,15 @@ export const contentPages: Record<string, ContentPage> = {
     slug: "about",
     title: "Quero Tech builds systems around outcomes, not generic SKUs.",
     eyebrow: "About Quero Tech",
-    summary:
-      "The site keeps the depth of the source catalog while reframing it as a premium advisory experience for customers who need help choosing the right machine, parts, and upgrade path.",
+    summary: "The site keeps the depth of the source catalog while reframing it as a premium advisory experience for customers who need help choosing the right machine, parts, and upgrade path.",
     sections: [
       {
         title: "What Quero Tech is optimizing for",
-        body: [
-          "Quero Tech combines a broad public hardware catalog with hands-on guidance for custom desktops, creator workstations, gaming setups, and specialized AI systems.",
-          "The product layer is intentionally browseable without forcing checkout. Users can compare parts, study compatibility cues, and convert into expert-led enquiries when the decision actually matters.",
-        ],
+        body: ["Quero Tech combines a broad public hardware catalog with hands-on guidance for custom desktops, creator workstations, gaming setups, and specialized AI systems.", "The product layer is intentionally browseable without forcing checkout. Users can compare parts, study compatibility cues, and convert into expert-led enquiries when the decision actually matters."],
       },
       {
         title: "Where the experience is different",
-        body: [
-          "Instead of mirroring a typical storefront, the new design emphasizes use-case discovery, clearer catalog hierarchy, and fewer dead-end pages.",
-          "The result is a site that works as a sales surface, a research tool, and an operations-ready content base for future commerce integration.",
-        ],
+        body: ["Instead of mirroring a typical storefront, the new design emphasizes use-case discovery, clearer catalog hierarchy, and fewer dead-end pages.", "The result is a site that works as a sales surface, a research tool, and an operations-ready content base for future commerce integration."],
       },
     ],
   },
@@ -150,21 +129,15 @@ export const contentPages: Record<string, ContentPage> = {
     slug: "stores",
     title: "Visit, call, or hand off the build brief to the Quero team.",
     eyebrow: "Stores and access",
-    summary:
-      "A placeholder structure for physical locations and support channels, ready to be swapped with final Quero Tech business details.",
+    summary: "A placeholder structure for physical locations and support channels, ready to be swapped with final Quero Tech business details.",
     sections: [
       {
         title: "Experience center",
-        body: [
-          "Primary showroom and consultation hub in Hyderabad. This slot should be replaced with the final Quero Tech address, map link, and walkthrough details.",
-          "Use this page to list consultation windows, pickup rules, demo systems, and local service expectations.",
-        ],
+        body: ["Primary showroom and consultation hub in Hyderabad. This slot should be replaced with the final Quero Tech address, map link, and walkthrough details.", "Use this page to list consultation windows, pickup rules, demo systems, and local service expectations."],
       },
       {
         title: "Remote support",
-        body: [
-          "For customers outside the city, the site should route discovery into BYDM, product enquiries, or expert consultation rather than checkout-first flows.",
-        ],
+        body: ["For customers outside the city, the site should route discovery into BYDM, product enquiries, or expert consultation rather than checkout-first flows."],
       },
     ],
   },
@@ -176,39 +149,60 @@ export const contentPages: Record<string, ContentPage> = {
     sections: [
       {
         title: "Response model",
-        body: [
-          "General questions route to the support desk. Purchase-ready users should be pushed toward the expert support and bulk enquiry flows where the team can qualify the request faster.",
-        ],
+        body: ["General questions route to the support desk. Purchase-ready users should be pushed toward the expert support and bulk enquiry flows where the team can qualify the request faster."],
       },
     ],
   },
 };
 
 export const faqs: FAQItem[] = [
+  // Payments
   {
-    question: "Can Quero Tech help me choose a complete system instead of a single part?",
-    answer:
-      "Yes. The site is structured to route uncertain buyers into guided flows like BYDM and expert support, where the team can recommend a full configuration based on workload, budget, and upgrade path.",
+    question: "What payment methods do you accept?",
+    answer: "We accept credit cards, debit cards, UPI, and cash payments. EMI options are also available on select purchases so you can spread the cost over easy monthly installments.",
   },
   {
-    question: "Is this launch transactional ecommerce?",
-    answer:
-      "No. This release supports full public catalog browsing and lead capture, but it deliberately avoids live checkout. Product pages focus on decision-making and conversion into enquiries.",
+    question: "Is there an EMI option available?",
+    answer: "Yes, we offer EMI on select credit and debit cards. EMI tenure and eligibility depend on your bank and card issuer. Our team can help you understand the available plans when you place your order.",
+  },
+  // Delivery
+  {
+    question: "Do you deliver across Hyderabad?",
+    answer: "Yes, we deliver all over Hyderabad. Once your order is confirmed, our team will coordinate a convenient delivery time. For large or heavy items like full PC builds, we ensure safe doorstep delivery.",
   },
   {
-    question: "Do you support gaming, creator, and AI workflows separately?",
-    answer:
-      "Yes. The information architecture and homepage use-case sections explicitly separate gaming, content creation, AI/research, and studio needs so users can start from the right context.",
+    question: "How long does delivery take?",
+    answer: "Most in-stock products are delivered within 1–3 business days across Hyderabad. Custom-built systems may take 3–7 business days depending on component availability and build complexity.",
+  },
+  // Consultation
+  {
+    question: "Do you offer free expert consultation?",
+    answer: "Absolutely. Whether you are building your first gaming PC, upgrading your workstation, or setting up a lab, our experts provide free advice tailored to your workload, budget, and future upgrade plans. Reach out via the Expert Support page or visit our store.",
+  },
+  // Service & Support
+  {
+    question: "What kind of after-sales support do you provide?",
+    answer: "We stand behind every product we sell. Our support includes assistance with hardware issues, troubleshooting, warranty claims with manufacturers, and guidance on upgrades. Just get in touch and our team will help you out.",
   },
   {
-    question: "How should pricing be handled before full commerce goes live?",
-    answer:
-      "The recommended approach is to keep source product metadata browseable while using CTA copy like Enquire, Talk to an Expert, Build with Quero, and Bulk Pricing wherever a purchase button would normally appear.",
+    question: "Do you offer warranty on products?",
+    answer: "All products come with the manufacturer's official warranty. We help you with the entire warranty process — from filing a claim to getting a replacement — so you never have to deal with it alone.",
   },
+  // Custom Builds
   {
-    question: "Can enterprise or lab buyers request larger quantities?",
-    answer:
-      "Yes. Bulk and institutional demand should flow through a dedicated bulk enquiry form with company, quantity, timeline, and deployment notes captured up front.",
+    question: "Can you build a custom PC for me?",
+    answer: "Yes, custom PC builds are one of our specialties. Use our Build Your Dream Machine page to tell us what you need, or speak with an expert and we will put together a system tailored to your exact requirements — gaming, content creation, AI workloads, or anything in between.",
+  },
+  // Bulk / Enterprise
+  {
+    question: "Do you handle bulk or enterprise orders?",
+    answer: "Yes. Whether you are outfitting an office, a gaming café, a research lab, or a content studio, we handle bulk orders with dedicated pricing and priority support. Fill out our Bulk Enquiry form with your requirements and our team will get back to you promptly.",
+  },
+
+  // Returns
+  {
+    question: "What is your return and exchange policy?",
+    answer: "We offer returns and exchanges as per our store policy and manufacturer guidelines. If you receive a defective or incorrect product, reach out to us immediately and we will arrange a replacement or refund.",
   },
 ];
 
@@ -244,8 +238,7 @@ export const campaignPages: Record<string, CampaignPage> = {
     slug: "amd",
     title: "AMD platform systems and upgrade paths.",
     subtitle: "Processors, Radeon graphics, and AM-based builds.",
-    description:
-      "A campaign hub for AMD-focused products, performance launches, and build guidance across gaming and creator workloads.",
+    description: "A campaign hub for AMD-focused products, performance launches, and build guidance across gaming and creator workloads.",
     ctaLabel: "Explore AMD hardware",
     ctaHref: "/brands/amd",
     focus: ["Ryzen processors", "Radeon graphics", "Motherboard ecosystems"],
@@ -254,8 +247,7 @@ export const campaignPages: Record<string, CampaignPage> = {
     slug: "nvidia",
     title: "NVIDIA-driven builds for gaming, studio, and AI work.",
     subtitle: "RTX campaigns, creator systems, and accelerated workflows.",
-    description:
-      "Use this hub for RTX storytelling, creator-grade performance messaging, and AI/compute-led system recommendations.",
+    description: "Use this hub for RTX storytelling, creator-grade performance messaging, and AI/compute-led system recommendations.",
     ctaLabel: "Browse component catalog",
     ctaHref: "/shop/components",
     focus: ["RTX graphics", "Studio systems", "AI acceleration"],
@@ -264,8 +256,7 @@ export const campaignPages: Record<string, CampaignPage> = {
     slug: "gigabyte-brand",
     title: "Gigabyte hardware across boards, monitors, graphics, and cases.",
     subtitle: "A branded destination for launch promos and platform bundles.",
-    description:
-      "This page absorbs vendor-heavy campaign content into a cleaner branded landing page with curated collections and stronger hierarchy.",
+    description: "This page absorbs vendor-heavy campaign content into a cleaner branded landing page with curated collections and stronger hierarchy.",
     ctaLabel: "Open Gigabyte hub",
     ctaHref: "/brands/gigabyte",
     focus: ["Aorus platforms", "Motherboards", "Monitors"],

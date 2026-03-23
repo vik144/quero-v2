@@ -1,6 +1,7 @@
 "use client";
 
 import { useDeferredValue, useState } from "react";
+import { Search } from "lucide-react";
 
 import { CollectionCard } from "@/components/collection-card";
 import { ProductCard } from "@/components/product-card";
@@ -34,16 +35,19 @@ export function CatalogExplorer({
     <section className="space-y-8">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <div className="text-xs uppercase tracking-[0.3em] text-white/40">Explorer</div>
-          <h2 className="mt-2 font-[family:var(--font-display)] text-3xl text-white">{title}</h2>
+          <div className="text-xs font-bold uppercase tracking-[0.3em] text-orange-400/60">Explorer</div>
+          <h2 className="mt-2 text-3xl font-extrabold text-white">{title}</h2>
           <p className="mt-3 max-w-2xl text-sm leading-7 text-white/60">{description}</p>
         </div>
-        <input
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-          placeholder="Search collections, products, or brands"
-          className="w-full rounded-full border border-white/12 bg-slate-950 px-5 py-3 text-sm text-white outline-none transition focus:border-cyan-300/40 lg:max-w-sm"
-        />
+        <div className="relative w-full lg:max-w-sm">
+          <input
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Search collections, products, or brands"
+            className="w-full rounded-xl border border-white/10 bg-[#151515] px-10 py-3 text-sm text-white placeholder:text-gray-500 outline-none transition focus:border-[#ff6b00]/50"
+          />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
+        </div>
       </div>
 
       <div className="space-y-5">

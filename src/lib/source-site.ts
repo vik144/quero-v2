@@ -22,13 +22,6 @@ type RemoteCollectionDetail = {
   productSlugs: string[];
 };
 
-type RemoteBlogDetail = {
-  title: string;
-  description: string;
-  image?: string;
-  blocks: string[];
-};
-
 async function fetchHtml(url: string) {
   const response = await fetch(url, {
     next: { revalidate: 60 * 60 * 6 },
@@ -151,28 +144,3 @@ export const getRemoteCollectionDetail = cache(
   },
 );
 
-export const getRemoteBlogDetail = cache(async (slug: string): Promise<RemoteBlogDetail | null> => {
-  try {
-    const html = await fetchHtml(`${SOURCE_BASE}/blogs/news/${slug}`);
-    const $ = load(html);
-    const title = cleanText(
-      $('meta[property="og:title"]').attr("content") ?? $("title").text() ?? slug,
-    );
-    const description = cleanText($('meta[property="og:description"]').attr("content"));
-    const image = normalizeShopifyImage($('meta[property="og:image"]').attr("content"));
-    const blocks = $("article p, article h2, article h3, .article-template p, .article-template h2, .article-template h3")
-      .toArray()
-      .map((node) => cleanText($(node).text()))
-      .filter((item) => item.length > 24)
-      .slice(0, 14);
-
-    return {
-      title,
-      description,
-      image,
-      blocks,
-    };
-  } catch {
-    return null;
-  }
-});

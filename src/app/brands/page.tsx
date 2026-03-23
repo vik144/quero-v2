@@ -10,18 +10,18 @@ export default function BrandsPage() {
     <div className="space-y-10">
       <PageHero
         eyebrow="Brands"
-        title="Vendor hubs live here, instead of crowding the top-level navigation."
-        description="This index preserves source brand depth while keeping the overall IA cleaner. Each brand page can host products, related collections, and campaign tie-ins."
+        title="Shop by brand — all your favourite names in one place."
+        description="Browse products from trusted hardware brands. Each brand hub has curated products, collections, and campaign tie-ins."
       />
       <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {brands.map((brand) => (
           <Link
             key={brand.slug}
             href={`/brands/${brand.slug}`}
-            className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6 transition hover:border-cyan-300/35 hover:bg-white/[0.05]"
+            className="rounded-2xl border border-white/5 bg-[#151515] p-6 transition hover:border-orange-500/30 hover:bg-[#1a1a1a]"
           >
-            <div className="text-xs uppercase tracking-[0.25em] text-white/35">{brand.slug}</div>
-            <div className="mt-3 text-2xl font-[family:var(--font-display)] text-white">{brand.name}</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-white/35">{brand.slug}</div>
+            <div className="mt-3 text-2xl font-extrabold text-white">{brand.name}</div>
             <div className="mt-3 text-sm leading-7 text-white/60">{brand.hero}</div>
           </Link>
         ))}

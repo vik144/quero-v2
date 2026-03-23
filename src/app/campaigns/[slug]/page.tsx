@@ -28,16 +28,16 @@ export default async function CampaignDetailPage({ params }: CampaignDetailPageP
         description={campaign.description}
       />
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
-          <div className="text-xs uppercase tracking-[0.35em] text-white/40">Focus areas</div>
+        <div className="rounded-2xl border border-white/5 bg-[#151515] p-8">
+          <div className="text-xs font-bold uppercase tracking-[0.3em] text-white/40">Focus areas</div>
           <div className="mt-5 space-y-3">
             {campaign.focus.map((focus) => (
-              <div key={focus} className="rounded-3xl border border-white/10 bg-slate-950/60 p-4 text-white/72">
+              <div key={focus} className="rounded-2xl border border-white/5 bg-[#0a0a0a] p-4 text-white/70">
                 {focus}
               </div>
             ))}
           </div>
-          <Link href={campaign.ctaHref} className="mt-6 inline-flex rounded-full border border-cyan-300/35 px-5 py-3 text-sm text-cyan-200">
+          <Link href={campaign.ctaHref} className="mt-6 inline-flex rounded-xl border border-orange-500/30 px-5 py-3 text-sm text-orange-400 transition hover:bg-orange-500/10">
             {campaign.ctaLabel}
           </Link>
         </div>

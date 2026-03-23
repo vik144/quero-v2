@@ -29,28 +29,28 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         <div className="space-y-4">
           <div className="grid gap-4 sm:grid-cols-2">
             {gallery.slice(0, 4).map((image) => (
-              <div key={image} className="relative aspect-square overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.03]">
+              <div key={image} className="relative aspect-square overflow-hidden rounded-2xl border border-white/5 bg-[#151515]">
                 <Image src={image} alt={detail?.title ?? product.title} fill className="object-cover" sizes="50vw" />
               </div>
             ))}
           </div>
         </div>
-        <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
-          <div className="text-xs uppercase tracking-[0.35em] text-cyan-200/75">Product detail</div>
-          <h1 className="mt-4 font-[family:var(--font-display)] text-4xl leading-tight text-white">
+        <div className="rounded-2xl border border-white/5 bg-[#151515] p-8">
+          <div className="text-xs font-bold uppercase tracking-[0.35em] text-[#ff6b00]">Product detail</div>
+          <h1 className="mt-4 text-4xl font-extrabold leading-tight text-white">
             {detail?.title ?? product.title}
           </h1>
-          <p className="mt-5 text-sm leading-7 text-white/62">
+          <p className="mt-5 text-sm leading-7 text-white/60">
             {detail?.description ||
-              "The product detail route uses imported sitemap metadata and source page enrichment to keep the full public catalog browseable without implementing checkout."}
+              "Browse the full product details, compare specs, and get expert advice on compatibility and upgrades."}
           </p>
-          <div className="mt-6 grid gap-4 rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-5 sm:grid-cols-2">
+          <div className="mt-6 grid gap-4 rounded-2xl border border-white/5 bg-[#0a0a0a] p-5 sm:grid-cols-2">
             <div>
-              <div className="text-xs uppercase tracking-[0.25em] text-white/35">Brand</div>
+              <div className="text-xs uppercase tracking-[0.2em] text-white/35">Brand</div>
               <div className="mt-1 text-white">{detail?.vendor ?? product.brandSlug ?? "Quero advisory"}</div>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-[0.25em] text-white/35">Pricing mode</div>
+              <div className="text-xs uppercase tracking-[0.2em] text-white/35">Pricing</div>
               <div className="mt-1 text-white">
                 {detail?.price && detail?.currency ? `${detail.currency} ${detail.price}` : "Request pricing"}
               </div>
@@ -59,21 +59,21 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
               href="/expert-support"
-              className="rounded-full bg-[linear-gradient(135deg,#22d3ee_0%,#bef264_100%)] px-5 py-3 text-sm font-semibold text-slate-950"
+              className="rounded-xl bg-[#ff6b00] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#ff6b00]/90"
             >
               Talk to an expert
             </Link>
-            <Link href="/bulk-enquiry" className="rounded-full border border-white/12 px-5 py-3 text-sm text-white/80">
+            <Link href="/bulk-enquiry" className="rounded-xl border border-white/10 px-6 py-3 text-sm text-white/80 transition hover:border-orange-500/30">
               Bulk pricing
             </Link>
           </div>
           <div className="mt-8 space-y-3">
-            <div className="text-xs uppercase tracking-[0.3em] text-white/35">Key specs</div>
+            <div className="text-xs font-bold uppercase tracking-[0.3em] text-white/35">Key specs</div>
             {(detail?.specs?.length ? detail.specs : [
               "Full structured data from the source page was not available for this product.",
               "Use the lead form below to request the exact specification sheet or compatibility review.",
             ]).map((spec) => (
-              <div key={spec} className="rounded-2xl border border-white/10 bg-slate-950/55 px-4 py-3 text-sm text-white/65">
+              <div key={spec} className="rounded-xl border border-white/5 bg-[#0a0a0a] px-4 py-3 text-sm text-white/60">
                 {spec}
               </div>
             ))}
@@ -83,16 +83,16 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
 
       <LeadForm
         source={`Product: ${product.slug}`}
-        heading="Convert product interest into a qualified system conversation."
-        description="This is the replacement for Add to Cart in v1. Capture the need, the constraints, and the contact path."
+        heading="Interested in this product?"
+        description="Get pricing, compatibility advice, or an upgrade review from the Quero Tech team."
         interestPlaceholder="Need pricing, compatibility advice, upgrade review..."
         compact
       />
 
       <section className="space-y-5">
         <div>
-          <div className="text-xs uppercase tracking-[0.35em] text-white/40">Related products</div>
-          <h2 className="mt-2 font-[family:var(--font-display)] text-3xl text-white">Keep the user inside the same decision corridor.</h2>
+          <div className="text-xs font-bold uppercase tracking-[0.35em] text-white/40">Related products</div>
+          <h2 className="mt-2 text-3xl font-extrabold text-white">You might also like.</h2>
         </div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {relatedProducts.map((item) => (

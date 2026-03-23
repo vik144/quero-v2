@@ -6,8 +6,8 @@ export default function BulkEnquiryPage() {
     <div className="space-y-10">
       <PageHero
         eyebrow="Bulk enquiry"
-        title="Institutional and multi-unit demand needs its own intake flow."
-        description="Use this route for teams, labs, studios, classrooms, and offices that need multiple systems or large hardware orders with custom pricing and timeline discussion."
+        title="Multi-unit and institutional orders."
+        description="For teams, labs, studios, classrooms, and offices that need multiple systems or large hardware orders with custom pricing."
       />
       <section className="grid gap-4 lg:grid-cols-3">
         {[
@@ -15,7 +15,7 @@ export default function BulkEnquiryPage() {
           "Deployment and imaging notes",
           "Recurring procurement and vendor coordination",
         ].map((item) => (
-          <div key={item} className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6 text-white/72">
+          <div key={item} className="rounded-2xl border border-white/5 bg-[#151515] p-6 text-white/70">
             {item}
           </div>
         ))}

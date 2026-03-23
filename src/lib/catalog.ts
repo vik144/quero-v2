@@ -1,13 +1,13 @@
 import sourceIndex from "@/data/generated/source-index.json";
+import { blogPosts as localBlogPosts } from "@/data/content/blogPosts";
 import { campaignPages } from "@/data/content/siteContent";
-import type { BlogPost, Brand, CatalogSection, Collection, Product } from "@/types/site";
+import type { Brand, CatalogSection, Collection, Product } from "@/types/site";
 
 type SourceIndex = typeof sourceIndex;
 
 const products = sourceIndex.products as Product[];
 const collections = sourceIndex.collections as Collection[];
 const brands = sourceIndex.brands as Brand[];
-const blogPosts = sourceIndex.blogPosts as BlogPost[];
 
 const sectionAliases: Record<string, CatalogSection> = {
   laptops: "laptops",
@@ -72,11 +72,11 @@ export function getCampaignBySlug(slug: string) {
 }
 
 export function getBlogPosts() {
-  return blogPosts;
+  return localBlogPosts;
 }
 
 export function getBlogPostBySlug(slug: string) {
-  return blogPosts.find((post) => post.slug === slug);
+  return localBlogPosts.find((post) => post.slug === slug);
 }
 
 export function getNewestProducts(count = 12) {

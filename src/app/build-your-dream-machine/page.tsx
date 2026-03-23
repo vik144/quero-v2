@@ -11,14 +11,15 @@ export default function BuildYourDreamMachinePage() {
     <div className="space-y-10">
       <PageHero
         eyebrow="BYDM"
-        title="Guide users through a build instead of dropping them into raw inventory."
-        description="The BYDM page becomes a structured configurator journey with system planning checkpoints, curated product samples, and a persistent lead form for expert assistance."
+        title="Build Your Dream Machine — step by step."
+        description="Walk through each component of your build. Pick your parts with guidance, or let the team configure the perfect system for your needs."
+        image="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&w=2000&auto=format&fit=crop"
       />
       <section className="grid gap-4 lg:grid-cols-2">
         {bydmSections.map((step, index) => (
-          <div key={step.title} className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
-            <div className="text-xs uppercase tracking-[0.3em] text-cyan-200/65">Step {index + 1}</div>
-            <div className="mt-3 text-2xl font-[family:var(--font-display)] text-white">{step.title}</div>
+          <div key={step.title} className="rounded-2xl border border-white/5 bg-[#151515] p-6">
+            <div className="text-xs font-bold uppercase tracking-[0.3em] text-[#ff6b00]">Step {index + 1}</div>
+            <div className="mt-3 text-2xl font-extrabold text-white">{step.title}</div>
             <div className="mt-3 text-sm leading-7 text-white/60">{step.note}</div>
           </div>
         ))}
@@ -31,8 +32,8 @@ export default function BuildYourDreamMachinePage() {
       />
       <section className="space-y-5">
         <div>
-          <div className="text-xs uppercase tracking-[0.35em] text-white/40">Component inspiration</div>
-          <h2 className="mt-2 font-[family:var(--font-display)] text-3xl text-white">Sample hardware surfaced from the imported public catalog.</h2>
+          <div className="text-xs font-bold uppercase tracking-[0.3em] text-white/40">Component inspiration</div>
+          <h2 className="mt-2 text-3xl font-extrabold text-white">Popular components to get you started.</h2>
         </div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {spotlightProducts.map((product) => (

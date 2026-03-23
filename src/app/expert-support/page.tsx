@@ -6,8 +6,8 @@ export default function ExpertSupportPage() {
     <div className="space-y-10">
       <PageHero
         eyebrow="Expert support"
-        title="A direct path for users who know they need guidance."
-        description="This route replaces vague contact experiences with a support-specific intake page for spec review, compatibility checks, workload planning, and shortlist validation."
+        title="Get guided help from the Quero Tech team."
+        description="Whether it's a spec review, compatibility check, workload planning, or shortlist validation — our experts are here to help."
       />
       <section className="grid gap-6 lg:grid-cols-3">
         {[
@@ -15,7 +15,7 @@ export default function ExpertSupportPage() {
           "Creator workstation planning",
           "GPU and platform compatibility review",
         ].map((item) => (
-          <div key={item} className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6 text-white/72">
+          <div key={item} className="rounded-2xl border border-white/5 bg-[#151515] p-6 text-white/70">
             {item}
           </div>
         ))}
@@ -23,7 +23,7 @@ export default function ExpertSupportPage() {
       <LeadForm
         source="Expert Support"
         heading="Connect with a Quero Tech specialist."
-        description="This form is shared with the rest of the site, but the page context makes it clear that the user is asking for guided technical support."
+        description="Tell us about your workload, budget, and timeline — we'll recommend the right setup."
         interestPlaceholder="Workload, bottleneck, shortlisted hardware..."
       />
     </div>

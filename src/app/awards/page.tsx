@@ -7,16 +7,16 @@ export default function AwardsPage() {
     <div className="space-y-10">
       <PageHero
         eyebrow="Awards"
-        title="Trust indicators stay visible, but they no longer overwhelm the storefront."
-        description="This page consolidates partner recognition, channel awards, and appreciation certificates into a focused credibility layer."
+        title="Recognised by the industry's best."
+        description="Partner recognition, channel awards, and appreciation certificates that back Quero Tech's credibility."
       />
       <section className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
         {awards.map((award) => (
-          <div key={award.title} className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
-            <div className="text-xs uppercase tracking-[0.3em] text-cyan-200/65">{award.year}</div>
-            <div className="mt-3 text-2xl font-[family:var(--font-display)] text-white">{award.title}</div>
+          <div key={award.title} className="rounded-2xl border border-white/5 bg-[#151515] p-6">
+            <div className="text-xs font-bold uppercase tracking-[0.25em] text-[#ff6b00]">{award.year}</div>
+            <div className="mt-3 text-2xl font-extrabold text-white">{award.title}</div>
             <div className="mt-2 text-sm text-white/60">{award.issuer}</div>
-            <div className="mt-4 text-sm leading-7 text-white/52">{award.note}</div>
+            <div className="mt-4 text-sm leading-7 text-white/50">{award.note}</div>
           </div>
         ))}
       </section>

@@ -1,10 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #05070a;
-  --foreground: #f4f7fb;
-  --muted: #9ca7b5;
-  --panel: rgba(255, 255, 255, 0.04);
+  --background: #0a0a0a;
+  --foreground: #f5f5f5;
+  --muted: #999;
+  --panel: #151515;
+  --accent-orange: #ff6b00;
+  --accent-green: #25d366;
+  --dark-card: #151515;
 }
 
 @theme inline {
@@ -36,13 +39,6 @@ summary::-webkit-details-marker {
 }
 
 ::selection {
-  background: rgba(34, 211, 238, 0.35);
+  background: rgba(255, 107, 0, 0.35);
   color: #fff;
-}
-
-.mesh-panel {
-  background:
-    radial-gradient(circle at top left, rgba(34, 211, 238, 0.16), transparent 26%),
-    radial-gradient(circle at bottom right, rgba(190, 242, 100, 0.1), transparent 24%),
-    linear-gradient(180deg, rgba(15, 23, 42, 0.88), rgba(2, 6, 23, 0.94));
 }

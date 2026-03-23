@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { formatDate, sectionLabel, titleizeSlug } from "@/lib/utils";
+import { sectionLabel, titleizeSlug } from "@/lib/utils";
 import type { Product } from "@/types/site";
 
 type ProductCardProps = {
@@ -12,9 +12,9 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <Link
       href={`/products/${product.slug}`}
-      className="group flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.03] transition hover:border-lime-300/35 hover:bg-white/[0.05]"
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/5 bg-[#151515] transition hover:border-orange-500/30"
     >
-      <div className="relative aspect-[4/3] overflow-hidden border-b border-white/10">
+      <div className="relative aspect-[4/3] overflow-hidden bg-black/20">
         {product.image ? (
           <Image
             src={product.image}
@@ -24,19 +24,24 @@ export function ProductCard({ product }: ProductCardProps) {
             className="object-cover transition duration-500 group-hover:scale-105"
           />
         ) : (
-          <div className="h-full w-full bg-[radial-gradient(circle_at_top_right,#bef26433,transparent_30%),linear-gradient(135deg,#020617,#111827)]" />
+          <div className="h-full w-full bg-gradient-to-br from-[#1a1a1a] to-[#111]" />
         )}
       </div>
-      <div className="flex flex-1 flex-col gap-3 p-5">
-        <div className="flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.25em] text-white/35">
+      <div className="flex flex-1 flex-col gap-2 p-4">
+        <div className="flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.2em] text-orange-400/60">
           {product.sections.slice(0, 2).map((section) => (
             <span key={section}>{sectionLabel(section)}</span>
           ))}
         </div>
-        <div className="line-clamp-3 text-base font-semibold text-white">{product.title}</div>
-        <div className="mt-auto flex items-center justify-between text-sm text-white/50">
-          <span>{product.brandName ?? (product.brandSlug ? titleizeSlug(product.brandSlug) : "Request pricing")}</span>
-          <span>{formatDate(product.lastModified)}</span>
+        <div className="line-clamp-2 text-sm font-semibold text-white">{product.title}</div>
+        <div className="mt-auto flex items-center justify-between text-sm">
+          <span className="text-white/50">
+            {product.brandName ?? (product.brandSlug ? titleizeSlug(product.brandSlug) : "")}
+          </span>
+          <span className="font-bold text-white">Request Pricing</span>
+        </div>
+        <div className="mt-1 w-full rounded-xl bg-[#ff6b00] py-2 text-center text-sm font-semibold text-white transition group-hover:bg-[#ff6b00]/90">
+          Enquire Now
         </div>
       </div>
     </Link>

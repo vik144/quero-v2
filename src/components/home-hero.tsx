@@ -9,16 +9,16 @@ import { siteConfig } from "@/data/content/siteContent";
 
 export function HomeHero() {
   return (
-    <section className="relative flex h-[500px] items-center overflow-hidden rounded-2xl sm:h-[550px] lg:h-[600px]">
+    <section className="relative flex min-h-[320px] items-center overflow-hidden rounded-2xl bg-[#151515] sm:h-[550px] lg:h-[600px]">
       <Image
         src="/hero-img.jpg"
         alt="Gaming Setup"
         fill
         sizes="100vw"
-        className="object-cover"
+        className="hidden object-cover sm:block"
         priority
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/80 via-[#0a0a0a]/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/80 via-[#0a0a0a]/40 to-transparent hidden sm:block" />
 
       <div className="relative z-10 w-full px-5 sm:px-8 lg:px-10">
         <motion.div

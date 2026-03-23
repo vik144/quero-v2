@@ -32,7 +32,38 @@ export function getAllCollections() {
 
 export function getFeaturedProducts(section?: CatalogSection, count = 12) {
   const base = section ? products.filter((product) => product.sections.includes(section)) : products;
-  return base.slice(0, count);
+  if (section) return base.slice(0, count);
+
+  // When no section filter, pick a variety across all sections
+  const sectionOrder: CatalogSection[] = ["components", "laptops", "accessories", "prebuilt-pcs"];
+  const grouped = new Map<CatalogSection, Product[]>();
+  for (const s of sectionOrder) {
+    grouped.set(s, base.filter((p) => p.sections.includes(s)));
+  }
+
+  const result: Product[] = [];
+  const seen = new Set<string>();
+  let round = 0;
+
+  while (result.length < count) {
+    let added = false;
+    for (const s of sectionOrder) {
+      if (result.length >= count) break;
+      const items = grouped.get(s)!;
+      if (round < items.length) {
+        const p = items[round];
+        if (!seen.has(p.slug)) {
+          seen.add(p.slug);
+          result.push(p);
+          added = true;
+        }
+      }
+    }
+    if (!added) break;
+    round++;
+  }
+
+  return result;
 }
 
 export function getCollectionsForSection(section: CatalogSection) {

@@ -13,7 +13,7 @@ export function ContentPageView({ page, leadSource }: ContentPageViewProps) {
       <PageHero eyebrow={page.eyebrow} title={page.title} description={page.summary} />
       <div className="grid gap-6 lg:grid-cols-2">
         {page.sections.map((section) => (
-          <section key={section.title} className="rounded-2xl border border-white/5 bg-[#151515] p-6">
+          <section key={section.title} className="rounded-2xl border border-white/5 bg-[#151515] p-4 sm:p-6">
             <h2 className="text-2xl font-extrabold text-white">{section.title}</h2>
             <div className="mt-4 space-y-4 text-sm leading-7 text-white/60">
               {section.body.map((paragraph) => (

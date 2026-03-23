@@ -30,7 +30,7 @@ export function LeadForm({
     <div className="rounded-2xl border border-white/5 bg-[#151515] p-6 sm:p-8">
       <div className="max-w-xl">
         <div className="text-xs font-bold uppercase tracking-[0.3em] text-[#ff6b00]">{source}</div>
-        <h2 className="mt-3 text-3xl font-extrabold text-white">{heading}</h2>
+        <h2 className="mt-3 text-2xl font-extrabold text-white sm:text-3xl">{heading}</h2>
         <p className="mt-3 text-sm leading-7 text-white/60">{description}</p>
       </div>
       <form action={action} className={`mt-8 grid gap-4 ${compact ? "lg:grid-cols-2" : "lg:grid-cols-3"}`}>

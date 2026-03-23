@@ -13,7 +13,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50">
       {/* Utility bar */}
-      <div className="bg-[#111] py-1.5 px-4 text-[10px] text-gray-400">
+      <div className="hidden bg-[#111] py-1.5 px-4 text-[10px] text-gray-400 sm:block">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1">

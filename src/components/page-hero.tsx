@@ -26,7 +26,7 @@ export function PageHero({ eyebrow, title, description, stats, image }: PageHero
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/70 to-transparent" />
         </>
       )}
-      <div className="relative p-8 sm:p-10">
+      <div className="relative p-5 sm:p-8 lg:p-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ export function PageHero({ eyebrow, title, description, stats, image }: PageHero
           className="max-w-4xl"
         >
           <div className="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-[#ff6b00]">{eyebrow}</div>
-          <h1 className="max-w-3xl text-4xl font-extrabold leading-tight text-white sm:text-5xl">
+          <h1 className="max-w-3xl text-2xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl">
             {title}
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">{description}</p>

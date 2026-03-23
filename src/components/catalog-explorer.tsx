@@ -36,7 +36,7 @@ export function CatalogExplorer({
       <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div>
           <div className="text-xs font-bold uppercase tracking-[0.3em] text-orange-400/60">Explorer</div>
-          <h2 className="mt-2 text-3xl font-extrabold text-white">{title}</h2>
+          <h2 className="mt-2 text-2xl font-extrabold text-white sm:text-3xl">{title}</h2>
           <p className="mt-3 max-w-2xl text-sm leading-7 text-white/60">{description}</p>
         </div>
         <div className="relative w-full lg:max-w-sm">

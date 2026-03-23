@@ -33,10 +33,10 @@ export default function Home() {
 
       {/* Category Grid */}
       <section>
-        <div className="mb-6 flex items-end justify-between gap-4">
+        <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
           <div>
             <div className="text-xs font-bold uppercase tracking-[0.3em] text-[#ff6b00]">Shop by Category</div>
-            <h2 className="mt-2 text-3xl font-extrabold text-white">Find exactly what you need.</h2>
+            <h2 className="mt-2 text-2xl font-extrabold text-white sm:text-3xl">Find exactly what you need.</h2>
           </div>
           <Link href="/shop" className="text-sm text-orange-400 hover:text-orange-300">
             View All
@@ -58,10 +58,10 @@ export default function Home() {
 
       {/* Featured Collections */}
       <section className="space-y-5">
-        <div className="flex items-end justify-between gap-4">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
           <div>
             <div className="text-xs font-bold uppercase tracking-[0.3em] text-white/40">Collections</div>
-            <h2 className="mt-2 text-3xl font-extrabold text-white">Browse curated collections.</h2>
+            <h2 className="mt-2 text-2xl font-extrabold text-white sm:text-3xl">Browse curated collections.</h2>
           </div>
           <Link href="/shop" className="text-sm text-orange-400 hover:text-orange-300">
             Open full shop
@@ -76,13 +76,13 @@ export default function Home() {
 
       {/* Hot Deals / Featured Products */}
       <section className="space-y-5">
-        <div className="flex items-end justify-between gap-4">
-          <div className="flex items-center gap-3">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
+          <div className="flex flex-wrap items-center gap-3">
             <div>
               <div className="text-xs font-bold uppercase tracking-[0.3em] text-white/40">Flagship products</div>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Hot Deals</h2>
+              <h2 className="mt-2 text-2xl font-extrabold text-white sm:text-3xl">Hot Deals</h2>
             </div>
-            <Flame className="text-[#ff6b00]" size={28} />
+            <Flame className="text-[#ff6b00]" size={24} />
             <span className="text-xs bg-[#ff6b00]/20 text-[#ff6b00] px-2.5 py-1 rounded-full font-bold">
               {stats.products}+ products
             </span>
@@ -99,19 +99,19 @@ export default function Home() {
       </section>
 
       {/* Promo Banner */}
-      <section className="relative overflow-hidden rounded-2xl h-[200px] flex items-center">
+      <section className="relative overflow-hidden rounded-2xl min-h-[160px] flex items-center sm:min-h-[200px]">
         <div className="absolute inset-0 bg-gradient-to-r from-[#ff6b00]/20 via-[#151515] to-[#25d366]/10 rounded-2xl" />
         <div className="absolute inset-0 border border-white/5 rounded-2xl" />
-        <div className="relative z-10 px-10 w-full flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="relative z-10 px-5 py-6 w-full flex flex-col items-center gap-4 text-center sm:px-10 sm:py-0 md:flex-row md:text-left md:justify-between md:gap-6">
           <div>
-            <h2 className="text-3xl font-extrabold text-white">
+            <h2 className="text-2xl font-extrabold text-white sm:text-3xl">
               Build Your <span className="text-[#25d366]">PC Bundle</span> & Save!
             </h2>
-            <p className="mt-2 text-gray-400">Customise your PC & get exclusive discounts.</p>
+            <p className="mt-2 text-sm text-gray-400 sm:text-base">Customise your PC & get exclusive discounts.</p>
           </div>
           <Link
             href="/build-your-dream-machine"
-            className="shrink-0 rounded-xl bg-gradient-to-r from-[#ff6b00] to-orange-600 px-10 py-3 font-bold text-white shadow-lg shadow-[#ff6b00]/20 transition hover:scale-105"
+            className="shrink-0 rounded-xl bg-gradient-to-r from-[#ff6b00] to-orange-600 px-8 py-3 text-sm font-bold text-white shadow-lg shadow-[#ff6b00]/20 transition hover:scale-105 sm:px-10 sm:text-base"
           >
             Start Building
           </Link>
@@ -120,9 +120,9 @@ export default function Home() {
 
       {/* Brands + Awards */}
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="rounded-2xl border border-white/5 bg-[#151515] p-8">
+        <div className="rounded-2xl border border-white/5 bg-[#151515] p-5 sm:p-8">
           <div className="text-xs font-bold uppercase tracking-[0.3em] text-white/40">Brands</div>
-          <h2 className="mt-2 text-3xl font-extrabold text-white">Shop by brand.</h2>
+          <h2 className="mt-2 text-2xl font-extrabold text-white sm:text-3xl">Shop by brand.</h2>
           <div className="mt-6 flex flex-wrap gap-3">
             {brands.map((brand) => (
               <Link
@@ -135,9 +135,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="rounded-2xl border border-white/5 bg-[#151515] p-8">
+        <div className="rounded-2xl border border-white/5 bg-[#151515] p-5 sm:p-8">
           <div className="text-xs font-bold uppercase tracking-[0.3em] text-white/40">Trust proof</div>
-          <h2 className="mt-2 text-3xl font-extrabold text-white">Awards & partnerships.</h2>
+          <h2 className="mt-2 text-2xl font-extrabold text-white sm:text-3xl">Awards & partnerships.</h2>
           <div className="mt-5 grid gap-4">
             {awards.slice(0, 3).map((award) => (
               <div key={award.title} className="rounded-2xl border border-white/5 bg-[#0a0a0a] p-4">
@@ -152,7 +152,7 @@ export default function Home() {
 
       {/* FAQ + Blog */}
       <section className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-        <div className="rounded-2xl border border-white/5 bg-[#151515] p-8">
+        <div className="rounded-2xl border border-white/5 bg-[#151515] p-5 sm:p-8">
           <div className="text-xs font-bold uppercase tracking-[0.3em] text-white/40">FAQ preview</div>
           <div className="mt-4 space-y-4">
             {faqs.slice(0, 3).map((faq) => (
@@ -166,9 +166,9 @@ export default function Home() {
             Read the full FAQ
           </Link>
         </div>
-        <div className="rounded-2xl border border-white/5 bg-[#151515] p-8">
+        <div className="rounded-2xl border border-white/5 bg-[#151515] p-5 sm:p-8">
           <div className="text-xs font-bold uppercase tracking-[0.3em] text-white/40">Blog</div>
-          <h2 className="mt-2 text-3xl font-extrabold text-white">Latest articles & guides.</h2>
+          <h2 className="mt-2 text-2xl font-extrabold text-white sm:text-3xl">Latest articles & guides.</h2>
           <div className="mt-6 grid gap-4">
             {posts.map((post) => (
               <Link

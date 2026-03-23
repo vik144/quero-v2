@@ -35,9 +35,9 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
             ))}
           </div>
         </div>
-        <div className="rounded-2xl border border-white/5 bg-[#151515] p-8">
+        <div className="rounded-2xl border border-white/5 bg-[#151515] p-5 sm:p-8">
           <div className="text-xs font-bold uppercase tracking-[0.35em] text-[#ff6b00]">Product detail</div>
-          <h1 className="mt-4 text-4xl font-extrabold leading-tight text-white">
+          <h1 className="mt-4 text-2xl font-extrabold leading-tight text-white sm:text-4xl">
             {detail?.title ?? product.title}
           </h1>
           <p className="mt-5 text-sm leading-7 text-white/60">
@@ -92,7 +92,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
       <section className="space-y-5">
         <div>
           <div className="text-xs font-bold uppercase tracking-[0.35em] text-white/40">Related products</div>
-          <h2 className="mt-2 text-3xl font-extrabold text-white">You might also like.</h2>
+          <h2 className="mt-2 text-2xl font-extrabold text-white sm:text-3xl">You might also like.</h2>
         </div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {relatedProducts.map((item) => (

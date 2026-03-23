@@ -7,7 +7,7 @@ import { siteConfig } from "@/data/content/siteContent";
 export function SiteFooter() {
   return (
     <footer className="border-t border-white/5 bg-[#0a0a0a]">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:gap-10 sm:px-6 sm:py-14 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         {/* Brand + Contact */}
         <div className="space-y-4">
           <div className="flex items-center gap-2">
